@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PracticProject.Models.UsersFolder.User>
+@{
+    ViewBag.Title = "Main Page";
+}
+<div>
+    <br>
+    <table class = "table">
+        <thead>
+            <tr>
+                <th> # </th>
+                <th>Доступные языки:</th>
+            </tr>
+        </thead>
+        <tbody class="table-striped">
+            @foreach (var b in ViewBag.Languages)
+            {
+                <tr>
+                    <td> @b.Id</td>
+                    <td> @b.Name </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
