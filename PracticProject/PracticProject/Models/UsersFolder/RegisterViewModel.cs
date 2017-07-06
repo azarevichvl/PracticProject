@@ -3,42 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
-namespace PracticProject.Models.UsersFolder
+namespace PracticProject.Models
 {
     public class RegisterViewModel
     {
-        /*
+        
         [Required]
         [Display(Name = "Логин")]
-         */ 
+         
         public string UserName { get; set; }
 
-        /*[Required]
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
-         */ 
+         
         public string Password { get; set; }
 
-        /*[Required]
-        [Compare("Password", ErrorMessage = "Пароли не совпадают")] //--Doesn't work, why?
+        [Required]
+        [Compare("Password", ErrorMessage = "Пароли не совпадают")] 
         [DataType(DataType.Password)]
         [Display(Name = "Подтвердите пароль")]
-         */ 
+  
         public string PasswordConfirm { get; set; }
 
-        /*[Required]
+
         [Display(Name = "Запомнить?")]
-         */ 
+         
         public bool RememberMe { get; set; }
 
-        //[Display(Name = "Имя")]
+        [Display(Name = "Имя")]
         public String Name { get; set; }
 
-        /*
-        [Required]
         [Display(Name = "Email")]
-         */ 
-        public String Adress { get; set; }
+        
+        public String Email { get; set; }
     }
 }

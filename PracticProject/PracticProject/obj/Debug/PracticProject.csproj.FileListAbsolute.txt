@@ -37,4 +37,12 @@ D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\ru\System.Web
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\ru\System.Web.WebPages.Razor.resources.dll
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.dll
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.pdb
-D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.csprojResolveAssemblyReference.cache
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\SHA3.dll
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\SHA3Managed.dll
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\SHA3.pdb
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\SHA3Managed.pdb
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\EntityFramework.SqlServer.dll
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\EntityFramework.SqlServer.xml
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.Migrations.InitialCreate.resources
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.csproj.GenerateResource.Cache

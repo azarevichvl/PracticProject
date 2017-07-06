@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using PracticProject.Models;
 using System.Data.Entity;
 
-namespace PracticProject.Controllers.Home
+namespace PracticProject.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,7 +14,7 @@ namespace PracticProject.Controllers.Home
 
         public ActionResult Index()
         {
-            IEnumerable<Language> lang = db.Languages;
+            IEnumerable<Language> lang = db.Languages.Where(u => u.Name == "English");
             ViewBag.Languages = lang;
 
             return View();
