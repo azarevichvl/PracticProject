@@ -3,6 +3,7 @@
     ViewBag.Title = "Main Page";
 }
 <div>
+    <h3 style=" width : inherit;"><label class=".label-info">Доступные для изучения языки</label></h3>
     <br>
     <table class = "table">
         <thead>
@@ -11,15 +12,14 @@
                 <th>Доступные языки:</th>
             </tr>
         </thead>
-        <!
         <tbody class="table-striped">
            @foreach (var b in ViewBag.Languages)
-            {
+           {
                 <tr>
                     <td> @b.Id</td>
                     <td> @b.Name </td>
                 </tr>
-            }
+           }
         </tbody>
             
     </table>

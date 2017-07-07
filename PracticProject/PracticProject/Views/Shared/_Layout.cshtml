@@ -32,14 +32,23 @@
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
+       
+    </div>
+    <hr />
+    <div class="navbar-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                @Html.ActionLink("Сменить язык интерфейса", "LanguageInterface", "LanguageInterface", null, new { @class = "btn btn-info" })
+            </div>
+        </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
 </body>
 </html>

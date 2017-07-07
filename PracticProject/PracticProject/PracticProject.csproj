@@ -142,6 +142,7 @@
     <Compile Include="Controllers\Account\AccountController.cs" />
     <Compile Include="Controllers\Account\UsersController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
+    <Compile Include="Controllers\Language\LanguageInterfaceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,6 +156,7 @@
     <Compile Include="Models\TasksFolder\Comment.cs" />
     <Compile Include="Models\TasksFolder\Status.cs" />
     <Compile Include="Models\TasksFolder\Task.cs" />
+    <Compile Include="Models\TasksFolder\TaskViewModel.cs" />
     <Compile Include="Models\UsersFolder\LogViewModel.cs" />
     <Compile Include="Models\UsersFolder\RegisterViewModel.cs" />
     <Compile Include="Models\UsersFolder\Role.cs" />
@@ -270,6 +272,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\LanguageInterface\LanguageInterface.cshtml" />
+    <Content Include="Views\Task\AddTaskPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707060819529_InitialCreate.resx">
@@ -279,6 +283,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

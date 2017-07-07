@@ -36,6 +36,7 @@ namespace PracticProject.Models
         [Display(Name = "Имя")]
         public String Name { get; set; }
 
+        [Required]
         [Display(Name = "Email")]
         
         public String Email { get; set; }

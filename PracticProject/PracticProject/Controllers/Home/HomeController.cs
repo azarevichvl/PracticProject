@@ -14,7 +14,7 @@ namespace PracticProject.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<Language> lang = db.Languages.Where(u => u.Name == "English");
+            IEnumerable<PracticProject.Models.Language> lang = db.Languages;
             ViewBag.Languages = lang;
 
             return View();

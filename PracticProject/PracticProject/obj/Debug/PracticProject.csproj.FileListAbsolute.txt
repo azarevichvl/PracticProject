@@ -46,3 +46,4 @@ D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\EntityFramewo
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\bin\ru\EntityFramework.SqlServer.resources.dll
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.Migrations.InitialCreate.resources
 D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.csproj.GenerateResource.Cache
+D:\CSharpProjects\PracticProject\PracticProject\PracticProject\obj\Debug\PracticProject.csprojResolveAssemblyReference.cache

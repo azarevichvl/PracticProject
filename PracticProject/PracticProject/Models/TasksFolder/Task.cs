@@ -15,6 +15,7 @@ namespace PracticProject.Models.TasksFolder
         public string Description { get; set; }
         public int StatusId { get; set; }
         public byte[] Image { get; set; }
-        public int LanguageId { get; set; }
+        public int TaskLanguageId { get; set; }
+        public int AnswerLanguageId { get; set; }
     }
 }
