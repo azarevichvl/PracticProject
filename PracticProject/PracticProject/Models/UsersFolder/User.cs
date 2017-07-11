@@ -41,16 +41,16 @@ namespace PracticProject.Models.UsersFolder
         
         [Display(Name = "Язык интерфейса")]
         
-        public int InterfaceLanguagesId { get; set; }
-        public Language LanguageInterface { get; set; }
+        public int InterfaceLanguageId { get; set; }
+        
         public int KnownLanguagesId { get; set; }
-        public Language LanguageKnown { get; set; }
+        
         public int LearningLanguagesId { get; set; }
-        public Language LanguageLearning { get; set; }
-
-       
-       [Display(Name = "Доступно опубликовать задач")] 
-    
+        public Language InterfaceLanguage { get; set; }
+        public Language KnownLanguages { get; set; }
+        public Language LearningLanguages { get; set; }
+               
+         [Display(Name = "Доступно опубликовать задач")] 
         public int Count { get; set; }
 
     }

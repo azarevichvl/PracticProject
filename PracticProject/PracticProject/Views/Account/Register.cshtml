@@ -51,10 +51,26 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.LanguagesInterface.Name, "Язык интерфейса", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.InterfaceLanguage.Name, "Язык интерфейса", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("InterfaceLanguageId")
-                @Html.ValidationMessageFor(model => model.InterfaceLanguagesId)
+                @Html.ValidationMessageFor(model => model.InterfaceLanguageId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KnownLanguages.Name, "Родной язык", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("KnownLanguagesId")
+                @Html.ValidationMessageFor(model => model.KnownLanguagesId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LearningLanguages.Name, "Изучаемый язык", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("LearningLanguagesId")
+                @Html.ValidationMessageFor(model => model.LearningLanguagesId)
             </div>
         </div>
 

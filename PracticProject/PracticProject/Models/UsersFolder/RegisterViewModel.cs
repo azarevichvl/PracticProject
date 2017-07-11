@@ -40,8 +40,14 @@ namespace PracticProject.Models
         [Display(Name = "Email")]
         public String Email { get; set; }
 
-        public int InterfaceLanguagesId { get; set; }
-        public Language LanguagesInterface { get; set; }
+        public int InterfaceLanguageId { get; set; }
+
+        public int KnownLanguagesId { get; set; }
+
+        public int LearningLanguagesId { get; set; }
+        public Language InterfaceLanguage { get; set; }
+        public Language KnownLanguages { get; set; }
+        public Language LearningLanguages { get; set; }
 
         public int Count { get; set; }
     }
