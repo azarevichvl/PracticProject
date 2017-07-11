@@ -24,6 +24,8 @@ namespace PracticProject.Controllers
 
         public ActionResult Register()
         {
+            ViewBag.InterfaceLanguageId = new SelectList(db.Languages, "Id", "Name");
+
             return View();
         }
 
@@ -120,9 +122,9 @@ namespace PracticProject.Controllers
                         Name = model.Name,
                         Email = model.Email,
                         Count = 10,
-                        InterfaceLanguageId = 1,    //stub
-                        KnownLanguagesId = 1,        //stub
-                        LearningLanguagesId = 1,     //stub
+                        InterfaceLanguagesId = model.InterfaceLanguagesId,    //stub
+                        KnownLanguagesId = model.KnownLanguagesId,           //stub
+                        LearningLanguagesId = model.learningLanguagesId,     //stub
                     });
                     db.SaveChanges();
                 }

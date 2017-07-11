@@ -11,10 +11,10 @@
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Topic, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Topic)
-                @Html.ValidationMessageFor(model => model.Topic)
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
             </div>
         </div>
 
@@ -28,19 +28,19 @@
 
         <!-- --------------------- -->
         
-        
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaskLanguage.Name, "Язык задания", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("TaskLanguageId")
+                @Html.ValidationMessageFor(model => model.TaskLanguageId)
+            </div>
+        </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TaskLangId, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AnswerLanguage.Name, "Язык ответа", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <select class="selectpicker">
-                    @foreach (var b in ViewBag.Languages )
-                    {
-                        <option>
-                            @b.Name
-                        </option>
-                    }
-                </select>
+                @Html.DropDownList("AnswerLanguageId")
+                @Html.ValidationMessageFor(model => model.AnswerLangId)
             </div>
         </div>
 

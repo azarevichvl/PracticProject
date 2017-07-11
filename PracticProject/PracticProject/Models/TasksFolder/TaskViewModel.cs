@@ -10,7 +10,7 @@ namespace PracticProject.Models.TasksFolder
     {
         [Required]
         [Display(Name = "Заголовок")]
-        public string Topic { get; set; }
+        public string Title { get; set; }
 
         [Required]
         [Display(Name = "Полное описание")]
@@ -21,9 +21,14 @@ namespace PracticProject.Models.TasksFolder
 
         [Required]
         [Display(Name = "Язык задания")]
-        public int TaskLangId { get; set; }
+        public int TaskLanguageId { get; set; }
+
+        public Language TaskLanguage { get; set; }
 
         [Display(Name = "Язык ответа")]
-        public int AnsLangId { get; set; }
+        public int AnswerLangId { get; set; }
+
+        public Language AnswerLanguage { get; set; }
+
     }
 }

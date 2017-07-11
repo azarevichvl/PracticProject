@@ -38,7 +38,11 @@ namespace PracticProject.Models
 
         [Required]
         [Display(Name = "Email")]
-        
         public String Email { get; set; }
+
+        public int InterfaceLanguagesId { get; set; }
+        public Language LanguagesInterface { get; set; }
+
+        public int Count { get; set; }
     }
 }
