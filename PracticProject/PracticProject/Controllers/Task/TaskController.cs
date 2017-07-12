@@ -26,21 +26,32 @@ namespace PracticProject.Controllers.Task
             return View();
         }
 
+        public ActionResult Details(int? id)
+        {
+            if (id == null) { id = 10; }
+            var task = db.Tasks.Include(p => p.TaskLanguage).Include(p => p.AnswerLanguage).FirstOrDefault(p => p.Id == id); 
+            return View(task);
+        }
+
+        [ChildActionOnly]
+        public ActionResult TaskListView()
+        {
+            var task = db.Tasks.Include(p => p.TaskLanguage).Include(p => p.AnswerLanguage); 
+            return PartialView(task);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddTaskPage([Bind(Include = "Id,Date,UserId,Title,Description,StatusId,Image,TaskLanguageId,AnswerLanguageId")] PracticProject.Models.TasksFolder.Task task)
         {
             if (ModelState.IsValid)
             {
+                task.Date = DateTime.Today;
                 db.Tasks.Add(task);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = task.Id });
             }
-            /*
-            ViewBag.ManufacturerId = new SelectList(db.Manufacturers, "Id", "Name", printer.ManufacturerId);
-            ViewBag.TypeId = new SelectList(db.Types, "Id", "Name", printer.TypeId);
-            return View(printer);
-             */
+
             return View(); // Error
         }
 

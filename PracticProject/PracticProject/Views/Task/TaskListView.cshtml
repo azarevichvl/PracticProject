@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PracticProject.Models.TasksFolder.Task>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskLanguage)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerLanguage)
+        </th>
+
+        <th>#</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <h3> @Html.DisplayFor(modelItem => item.Title)</h3>
+            </td>
+           
+            <td>
+                @item.Date.Day / @item.Date.Month / @item.Date.Year
+            </td>
+
+            <td>      
+                @Html.DisplayFor(modelItem => item.TaskLanguage.Name)
+            </td>
+
+            <td>
+                
+                @Html.DisplayFor(modelItem => item.AnswerLanguage.Name)
+            </td>
+
+            <td>
+                
+            </td>
+        </tr>
+    }
+
+</table>

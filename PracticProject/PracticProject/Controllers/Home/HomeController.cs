@@ -25,5 +25,10 @@ namespace PracticProject.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        public ActionResult TaskListView()
+        {
+            return PartialView();
+        }
     }
 }

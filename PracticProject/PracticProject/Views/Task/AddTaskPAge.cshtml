@@ -11,8 +11,8 @@
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
                 @Html.EditorFor(model => model.Title)
                 @Html.ValidationMessageFor(model => model.Title)
             </div>
@@ -21,12 +21,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Description)
+                <!--Html.EditorFor(model => model.Description)-->
+                @Html.TextAreaFor(model => model.Description, new { cols = 35, @rows = 5 })
                 @Html.ValidationMessageFor(model => model.Description)
             </div>
         </div>
 
-        <!-- --------------------- -->
         
         <div class="form-group">
             @Html.LabelFor(model => model.TaskLanguage.Name, "Язык задания", new { @class = "control-label col-md-2" })
