@@ -15,10 +15,12 @@ namespace PracticProject.Models
         public DbSet<Role> Roles { get; set; }
 
         public DbSet<Task> Tasks { get; set; }
+        public DbSet<Answer> Answer { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Language> Languages { get; set; }
+        
 
     }
 }

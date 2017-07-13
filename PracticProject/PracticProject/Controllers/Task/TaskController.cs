@@ -26,6 +26,13 @@ namespace PracticProject.Controllers.Task
             return View();
         }
 
+        public ActionResult MyTasks()
+        {
+            return View();
+        }
+
+
+
         public ActionResult Details(int? id)
         {
             if (id == null) { id = 10; }
@@ -38,6 +45,22 @@ namespace PracticProject.Controllers.Task
         {
             var task = db.Tasks.Include(p => p.TaskLanguage).Include(p => p.AnswerLanguage); 
             return PartialView(task);
+        }
+
+        [ChildActionOnly]
+        public ActionResult AddAnswerPage(int? id)
+        {
+            PracticProject.Models.TasksFolder.Task task = db.Tasks.FirstOrDefault(m => m.Id == id);
+            ViewBag.TaskItem = task;
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult AnswersPage(int? id)
+        {
+            IEnumerable<Answer> ans = db.Answer.Where(m => m.TaskId == id);
+            ViewBag.Answers = ans;
+            return PartialView();
         }
 
         [HttpPost]
@@ -53,6 +76,22 @@ namespace PracticProject.Controllers.Task
             }
 
             return View(); // Error
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddAnswerPage([Bind(Include = "Id,Date,Description,Image,Likes,TaskId,TaskItem")] PracticProject.Models.TasksFolder.Answer answer)
+        {
+            if (ModelState.IsValid)
+            {
+                answer.Date = DateTime.Today;
+                answer.TaskId = answer.Id; // хз почему, но тут Id это Id таска накоторый был отправлен запрос, чекнуть позже. Магия короче. Но работает
+                db.Answer.Add(answer);
+                db.SaveChanges();
+                //return RedirectToAction("Details", new { id = answer.TaskId });
+            }
+
+            return null; // Error
         }
 
     }

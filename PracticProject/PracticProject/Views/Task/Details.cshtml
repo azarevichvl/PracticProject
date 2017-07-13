@@ -4,16 +4,58 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Вопрос</h2>
 <div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+    <table class="table table-bordered" >
+        <tr>
+            <td colspan="3">
+                <div class="well" style="background-color: transparent; font-size: large; border-bottom: none; border-top: none;  margin-bottom: 0px; border-radius: 5px;">
+                    @Html.DisplayFor(model => model.Title)
+                    <hr>
+                    <span style="font-size: medium">@Html.DisplayFor(model => model.Description)</span>
+                </div>
+            </td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+        </tr>
+        <tr>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Date):
+                    </dt>
+                    <dd>
+                        @Model.Date.Day / @Model.Date.Month / @Model.Date.Year
+                    </dd>
+                </dl>
+            </td>
 
-        <dt>
-            @Html.DisplayFor(model => model.Title)
-        </dt>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TaskLanguage):
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.TaskLanguage.Name)
+                    </dd>
+                </dl>
+            </td>
 
-    </dl>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AnswerLanguage):
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AnswerLanguage.Name)
+                    </dd>
+                </dl>
+            </td>
+
+        </tr>
+    </table>
+<h2>Ответы</h2>
+
+    @{Html.RenderAction("AnswersPage", "Task", new { id = Model.Id });}
+    @{Html.RenderAction("AddAnswerPage", "Task", new {id = Model.Id}); }
 </div>
